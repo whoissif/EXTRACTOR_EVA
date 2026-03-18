@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extractor de Actas de Evaluación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 Extractor de Actas de Evaluación "EVITA DINAMITA"</h1>
+            <p class="subtitle">Sube el acta en PDF y obtén los datos listos para Excel</p>
+        </header>
+
+        <main>
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="pdfFile" accept="application/pdf" hidden>
+                <button class="btn btn-primary" id="selectFileBtn">Seleccionar archivo PDF</button>
+                <span class="file-name" id="fileName">Ningún archivo seleccionado</span>
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-secondary" id="processBtn" disabled>Procesar PDF</button>
+                <button class="btn btn-success" id="exportCSVBtn" disabled>📥 Descargar CSV</button>
+                <button class="btn btn-success" id="exportXLSXBtn" disabled>📥 Descargar Excel</button>
+            </div>
+
+            <div class="progress" id="progressContainer" style="display: none;">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <div class="preview">
+                <h3>Vista previa de los datos extraídos</h3>
+                <div class="preview-stats" id="stats"></div>
+                <div class="preview-table-container">
+                    <table class="preview-table" id="previewTable">
+                        <thead>
+                            <tr>
+                                <th>Expediente</th>
+                                <th>DNI</th>
+                                <th>Unidad Formativa</th>
+                                <th>Calificación</th>
+                            </tr>
+                        </thead>
+                        <tbody id="previewBody">
+                            <tr><td colspan="4" class="placeholder">Esperando archivo...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>🔍 La app detecta automáticamente todas las unidades formativas (UFxxxx y MPxxxx) y sus calificaciones.</p>
+        </footer>
+    </div>
+
+    <!-- Librerías externas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <!-- Nuestro script -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #f6f9fc 0%, #e9f1f8 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(0, 20, 40, 0.2), 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #0b3b5c;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #2c5778;
+    font-weight: 400;
+}
+
+.upload-area {
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px dashed #7fa9c9;
+    border-radius: 24px;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #0b3b5c;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.btn {
+    border: none;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin: 0 5px;
+}
+
+.btn-primary {
+    background: #0b3b5c;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #154e74;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(11, 59, 92, 0.2);
+}
+
+.btn-secondary {
+    background: #e1eef9;
+    color: #0b3b5c;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #c8ddec;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background: #1e7e34;
+    color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+    background: #259b41;
+    transform: translateY(-1px);
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.file-name {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 1rem;
+    color: #2c5778;
+    font-weight: 500;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+    background: #d9e6f2;
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #0b3b5c, #2f7fb5);
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.preview {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.preview h3 {
+    font-size: 1.5rem;
+    color: #0b3b5c;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.preview-stats {
+    font-size: 1rem;
+    color: #1e4a6b;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    background: #d9e6f2;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.preview-table-container {
+    overflow-x: auto;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.preview-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.preview-table th {
+    background: #0b3b5c;
+    color: white;
+    padding: 14px 12px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.preview-table td {
+    padding: 12px;
+    border-bottom: 1px solid #d9e6f2;
+    color: #1a3d5c;
+}
+
+.preview-table tbody tr:hover {
+    background: #f0f7fd;
+}
+
+.placeholder {
+    text-align: center;
+    color: #8aa9c9;
+    font-style: italic;
+    padding: 30px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #386a8c;
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(127, 169, 201, 0.3);
+    padding-top: 20px;
+}
